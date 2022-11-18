@@ -26,8 +26,6 @@ def validate_length(prompt: str) -> bool:
     
 def generate_keywords(prompt: str) -> List[str]:
     #Load API key for open AI, also define organization
-    openai.organization = "org-M685nfZxtCzkRaDxQKyVcbBu"
-    os.environ['OPENAI_API_KEY'] = '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'
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
     enriched_prompt = f"Generate related branding keywords for {prompt}: "
@@ -50,8 +48,6 @@ def generate_keywords(prompt: str) -> List[str]:
 
 def generate_branding_snippet(prompt: str) -> str:
     #Load API key for open AI, also define organization
-    openai.organization = "org-M685nfZxtCzkRaDxQKyVcbBu"
-    os.environ['OPENAI_API_KEY'] = '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'
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
     enriched_prompt = f"Generate upbeat branding snippet for {prompt}: "
